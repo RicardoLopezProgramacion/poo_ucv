@@ -11,4 +11,13 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <exec.mainClass>com.cothify.app.Clothify</exec.mainClass>
     </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+    </dependencies>
+    
 </project>
