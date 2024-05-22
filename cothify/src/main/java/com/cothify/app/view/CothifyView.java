@@ -1,9 +1,16 @@
 package com.cothify.app.view;
 
+import java.awt.geom.RoundRectangle2D;
+
 public class CothifyView extends javax.swing.JFrame {
 
     public CothifyView() {
+        setUndecorated(true);
         initComponents();
+        //setOpacity(0.9f);
+        setLocationRelativeTo(null);
+        setShape(new RoundRectangle2D.Double(0,0,getWidth(),getHeight(),30,30));
+        
     }
 
 
