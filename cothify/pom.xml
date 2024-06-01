@@ -9,7 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <exec.mainClass>com.cothify.app.Cothify</exec.mainClass>
+        <exec.mainClass>com.cothify.app.CothifyApp</exec.mainClass>
     </properties>
     
     <dependencies>
@@ -28,6 +28,13 @@
             <groupId>org.netbeans.external</groupId>
             <artifactId>AbsoluteLayout</artifactId>
             <version>RELEASE210</version>
+        </dependency>
+        
+        <!-- Creacion de dependencia manual usando libreria local en la carpeta "Other Sources/src/main/resources/other_libraries/NefAnimacion_V2.1_jdk18.jar"-->
+        <dependency>
+            <groupId>com.NefAnimacion</groupId>
+            <artifactId>NefAnimation</artifactId>
+            <version>2.1</version>
         </dependency>
         
     </dependencies>
