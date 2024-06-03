@@ -3,6 +3,7 @@ package com.cothify.app.controller;
 import Animacion.Animacion;
 import com.cothify.app.model.dao.Login;
 import com.cothify.app.view.CothifyView;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -18,6 +19,7 @@ public class LoginController implements ActionListener, MouseListener {
         this.login = null;
         view.btnLogin.addActionListener(this);
         view.btnRegister.addMouseListener(this);
+        view.btnExit.addMouseListener(this);
     }
 
     @Override
@@ -43,10 +45,16 @@ public class LoginController implements ActionListener, MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
+        if (e.getSource() == view.btnExit) {
+            view.btnExit.setBackground(Color.red);
+        }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
+        if (e.getSource() == view.btnExit) {
+            view.btnExit.setBackground(null);
+        }
     }
 
 }

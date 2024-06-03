@@ -82,18 +82,19 @@ public class CothifyView extends javax.swing.JFrame {
         pnlBar.setBackground(new java.awt.Color(17, 33, 34));
         pnlBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnExit.setBackground(null);
         btnExit.setFont(new java.awt.Font("Quicksand Light", 0, 30)); // NOI18N
         btnExit.setForeground(new java.awt.Color(255, 255, 255));
         btnExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnExit.setText("x");
-        btnExit.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnExit.setOpaque(true);
         btnExit.setPreferredSize(new java.awt.Dimension(30, 30));
         btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnExitMouseClicked(evt);
             }
         });
-        pnlBar.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1231, 5, -1, -1));
+        pnlBar.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 0, 60, 40));
 
         pnlMain.add(pnlBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 40));
 
@@ -404,7 +405,7 @@ public class CothifyView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel btnEN;
-    private javax.swing.JLabel btnExit;
+    public javax.swing.JLabel btnExit;
     public javax.swing.JButton btnLogin;
     public javax.swing.JLabel btnLogin2;
     public javax.swing.JLabel btnRegister;

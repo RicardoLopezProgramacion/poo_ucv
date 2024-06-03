@@ -2,7 +2,7 @@ package com.cothify.app.model.dao;
 
 import com.cothify.app.model.entity.Person;
 
-public class WarehouseManager implements PersonDAO {
+public class WarehouseManagerDAO implements PersonDAO {
 
     @Override
     public void insert(Person person) {
