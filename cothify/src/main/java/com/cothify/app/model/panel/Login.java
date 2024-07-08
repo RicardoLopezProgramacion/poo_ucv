@@ -1,5 +1,6 @@
-package com.cothify.app.model.dao;
+package com.cothify.app.model.panel;
 
+import com.cothify.app.model.dao.AccountInterface;
 import com.cothify.app.model.db.Database;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

@@ -1,7 +1,7 @@
 package com.cothify.app.controller;
 
 import Animacion.Animacion;
-import com.cothify.app.model.dao.Login;
+import com.cothify.app.model.panel.Login;
 import com.cothify.app.view.CothifyView;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
