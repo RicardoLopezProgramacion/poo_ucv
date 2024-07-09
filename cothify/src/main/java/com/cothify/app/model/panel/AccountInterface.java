@@ -1,5 +1,5 @@
 
-package com.cothify.app.model.dao;
+package com.cothify.app.model.panel;
 
 
 public interface AccountInterface {

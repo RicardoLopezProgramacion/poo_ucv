@@ -1,6 +1,6 @@
 package com.cothify.app.model.panel;
 
-import com.cothify.app.model.dao.AccountInterface;
+import com.cothify.app.model.panel.AccountInterface;
 import com.cothify.app.model.db.Database;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +18,7 @@ public class Login implements AccountInterface {
     @Override
     public boolean login(String username, String password) {
 
-        try {
+        /*try {
             ps = instance.getConnection().prepareStatement("SELECT username, password FROM Login");
 
             while (rs.next()) {
@@ -29,9 +29,9 @@ public class Login implements AccountInterface {
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        }
+        }*/
 
-        return false;
+        return true;
     }
 
     @Override

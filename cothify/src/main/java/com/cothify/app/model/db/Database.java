@@ -17,7 +17,7 @@ public class Database {
 
     public Connection getConnection() {
         try {
-            conn = DriverManager.getConnection("jdbc::mysql://localhost:3306/sesion11", "root", "");
+            conn = DriverManager.getConnection("jdbc::mysql://localhost:3306/proyecto_poo", "root", "");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
