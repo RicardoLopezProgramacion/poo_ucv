@@ -31,10 +31,13 @@ public class LoginController implements ActionListener, MouseListener, FocusList
         if (e.getSource() == view.btnLogin) {
             Login login = new Login();
             char[] password = view.txtPassword.getPassword();
-            boolean access = login.login(view.txtUser.getText(), new String(password));
+            
+            boolean access = login.login(view.txtUser.getText(), view.txtPassword.getText());
+            
             if (access) {
                 Animacion.mover_izquierda(0, -1280, 1, 8, view.pnlLogin);
                 Animacion.mover_derecha(-1280, 0, 1, 8, view.pnlOptions);
+                OptionsController options = new OptionsController(view);
             }
         }
     }

@@ -8,7 +8,6 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-// random color "new Color((int) (Math.random() * 0x1000000))"
 public class CothifyView extends javax.swing.JFrame {
 
     private JPanel gridPanel;
@@ -24,13 +23,7 @@ public class CothifyView extends javax.swing.JFrame {
         setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 30, 30));
         changeFonts();
 
-        /*  for (int i = 0; i < 3; i++) {
-            JPanel p1 = new JPanel();
-            p1.setPreferredSize(new Dimension(250, 250));
-            p1.setBackground(new Color((int) (Math.random() * 0x1000000)));
-            catalogo.add(p1);
-            
-        }*/
+       
     }
 
     //Fuentes de google
@@ -79,7 +72,6 @@ public class CothifyView extends javax.swing.JFrame {
         txtEmail = new javax.swing.JTextField();
         lblRegisterOn = new javax.swing.JLabel();
         lblCothify1 = new javax.swing.JLabel();
-        txtUsername = new javax.swing.JTextField();
         txtUsername1 = new javax.swing.JTextField();
         txtUsername2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -95,14 +87,15 @@ public class CothifyView extends javax.swing.JFrame {
         btnFavorite = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         pnlProfile = new javax.swing.JPanel();
-        cateroryPanel1 = new javax.swing.JPanel();
+        menuPanel = new javax.swing.JPanel();
         lblCothify4 = new javax.swing.JLabel();
-        btnCatalogue2 = new javax.swing.JButton();
-        btnCatalogue3 = new javax.swing.JButton();
-        btnCatalogue4 = new javax.swing.JButton();
-        btnCatalogue5 = new javax.swing.JButton();
-        btnCatalogue6 = new javax.swing.JButton();
-        productsPanel1 = new javax.swing.JPanel();
+        btnPersonalData = new javax.swing.JButton();
+        btnPaymentMethods = new javax.swing.JButton();
+        btnShoppingHistory = new javax.swing.JButton();
+        btnInventaryControl = new javax.swing.JButton();
+        btnAnalitycs = new javax.swing.JButton();
+        jLabel24 = new javax.swing.JLabel();
+        pnlPersonalData = new javax.swing.JPanel();
         btnDeleteImageFile = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         btnSaveChanges = new javax.swing.JButton();
@@ -113,6 +106,13 @@ public class CothifyView extends javax.swing.JFrame {
         txtSetName = new javax.swing.JTextField();
         txtSetLastname = new javax.swing.JTextField();
         txtSetDayBirth = new javax.swing.JTextField();
+        pnlPaymentMethods = new javax.swing.JPanel();
+        card3 = new javax.swing.JButton();
+        btnNextMethod = new javax.swing.JButton();
+        card1 = new javax.swing.JButton();
+        card2 = new javax.swing.JButton();
+        btnSelectMethod = new javax.swing.JButton();
+        btnBackMethod = new javax.swing.JButton();
         pnlCatalogue = new javax.swing.JPanel();
         cateroryPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -308,11 +308,6 @@ public class CothifyView extends javax.swing.JFrame {
                 txtEmailFocusLost(evt);
             }
         });
-        txtEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmailActionPerformed(evt);
-            }
-        });
         pnlRegister.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 300, 40));
 
         lblRegisterOn.setFont(new java.awt.Font("Quicksand Light", 0, 24)); // NOI18N
@@ -326,27 +321,9 @@ public class CothifyView extends javax.swing.JFrame {
         lblCothify1.setText("Cothify");
         pnlRegister.add(lblCothify1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 100, -1, 60));
 
-        txtUsername.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtUsername.setForeground(new java.awt.Color(91, 91, 91));
-        txtUsername.setText("Enter username");
-        txtUsername.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                txtUsernameFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                txtUsernameFocusLost(evt);
-            }
-        });
-        txtUsername.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsernameActionPerformed(evt);
-            }
-        });
-        pnlRegister.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, 300, 40));
-
         txtUsername1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtUsername1.setForeground(new java.awt.Color(91, 91, 91));
-        txtUsername1.setText("Enter username");
+        txtUsername1.setText("Enter password");
         txtUsername1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtUsername1FocusGained(evt);
@@ -355,16 +332,11 @@ public class CothifyView extends javax.swing.JFrame {
                 txtUsername1FocusLost(evt);
             }
         });
-        txtUsername1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsername1ActionPerformed(evt);
-            }
-        });
-        pnlRegister.add(txtUsername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 300, 40));
+        pnlRegister.add(txtUsername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, 300, 40));
 
         txtUsername2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtUsername2.setForeground(new java.awt.Color(91, 91, 91));
-        txtUsername2.setText("Enter username");
+        txtUsername2.setText("Confirm password");
         txtUsername2.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtUsername2FocusGained(evt);
@@ -373,12 +345,7 @@ public class CothifyView extends javax.swing.JFrame {
                 txtUsername2FocusLost(evt);
             }
         });
-        txtUsername2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsername2ActionPerformed(evt);
-            }
-        });
-        pnlRegister.add(txtUsername2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, 300, 40));
+        pnlRegister.add(txtUsername2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 300, 40));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/register_and_login.png"))); // NOI18N
@@ -483,92 +450,99 @@ public class CothifyView extends javax.swing.JFrame {
         pnlProfile.setBackground(new java.awt.Color(255, 255, 255));
         pnlProfile.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cateroryPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        cateroryPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 1, new java.awt.Color(217, 217, 217)));
-        cateroryPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        menuPanel.setBackground(new java.awt.Color(255, 255, 255));
+        menuPanel.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 1, new java.awt.Color(217, 217, 217)));
+        menuPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblCothify4.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         lblCothify4.setForeground(new java.awt.Color(17, 34, 34));
         lblCothify4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/HealthiconsUiUserProfileOutline (1).png"))); // NOI18N
-        cateroryPanel1.add(lblCothify4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 80, 80));
+        menuPanel.add(lblCothify4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 80, 80));
 
-        btnCatalogue2.setBackground(new java.awt.Color(239, 239, 239));
-        btnCatalogue2.setFont(new java.awt.Font("Quicksand Light", 0, 24)); // NOI18N
-        btnCatalogue2.setForeground(new java.awt.Color(17, 164, 164));
-        btnCatalogue2.setText("<html>Personal <br><center>data</center></html>");
-        btnCatalogue2.setBorder(null);
-        btnCatalogue2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCatalogue2.addActionListener(new java.awt.event.ActionListener() {
+        btnPersonalData.setBackground(new java.awt.Color(239, 239, 239));
+        btnPersonalData.setFont(new java.awt.Font("Quicksand Light", 0, 24)); // NOI18N
+        btnPersonalData.setForeground(new java.awt.Color(17, 164, 164));
+        btnPersonalData.setText("<html>Personal <br><center>data</center></html>");
+        btnPersonalData.setBorder(null);
+        btnPersonalData.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPersonalData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCatalogue2ActionPerformed(evt);
+                btnPersonalDataActionPerformed(evt);
             }
         });
-        cateroryPanel1.add(btnCatalogue2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 260, 90));
+        menuPanel.add(btnPersonalData, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 260, 90));
 
-        btnCatalogue3.setFont(new java.awt.Font("Quicksand Light", 0, 24)); // NOI18N
-        btnCatalogue3.setForeground(new java.awt.Color(17, 164, 164));
-        btnCatalogue3.setText("<html>Payment <br><center>methods</center></html>");
-        btnCatalogue3.setBorder(null);
-        btnCatalogue3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCatalogue3.addActionListener(new java.awt.event.ActionListener() {
+        btnPaymentMethods.setFont(new java.awt.Font("Quicksand Light", 0, 24)); // NOI18N
+        btnPaymentMethods.setForeground(new java.awt.Color(17, 164, 164));
+        btnPaymentMethods.setText("<html>Payment <br><center>methods</center></html>");
+        btnPaymentMethods.setBorder(null);
+        btnPaymentMethods.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPaymentMethods.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCatalogue3ActionPerformed(evt);
+                btnPaymentMethodsActionPerformed(evt);
             }
         });
-        cateroryPanel1.add(btnCatalogue3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 260, 90));
+        menuPanel.add(btnPaymentMethods, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 260, 90));
 
-        btnCatalogue4.setFont(new java.awt.Font("Quicksand Light", 0, 24)); // NOI18N
-        btnCatalogue4.setForeground(new java.awt.Color(17, 164, 164));
-        btnCatalogue4.setText("<html>Shopping<br><center>history</center></html>");
-        btnCatalogue4.setBorder(null);
-        btnCatalogue4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCatalogue4.addActionListener(new java.awt.event.ActionListener() {
+        btnShoppingHistory.setFont(new java.awt.Font("Quicksand Light", 0, 24)); // NOI18N
+        btnShoppingHistory.setForeground(new java.awt.Color(17, 164, 164));
+        btnShoppingHistory.setText("<html>Shopping<br><center>history</center></html>");
+        btnShoppingHistory.setBorder(null);
+        btnShoppingHistory.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnShoppingHistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCatalogue4ActionPerformed(evt);
+                btnShoppingHistoryActionPerformed(evt);
             }
         });
-        cateroryPanel1.add(btnCatalogue4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 260, 90));
+        menuPanel.add(btnShoppingHistory, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 260, 90));
 
-        btnCatalogue5.setFont(new java.awt.Font("Quicksand Light", 0, 24)); // NOI18N
-        btnCatalogue5.setForeground(new java.awt.Color(17, 164, 164));
-        btnCatalogue5.setText("<html>Invetary <br><center>control</center></html>");
-        btnCatalogue5.setBorder(null);
-        btnCatalogue5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCatalogue5.addActionListener(new java.awt.event.ActionListener() {
+        btnInventaryControl.setFont(new java.awt.Font("Quicksand Light", 0, 24)); // NOI18N
+        btnInventaryControl.setForeground(new java.awt.Color(17, 164, 164));
+        btnInventaryControl.setText("<html>Invetary <br><center>control</center></html>");
+        btnInventaryControl.setBorder(null);
+        btnInventaryControl.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnInventaryControl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCatalogue5ActionPerformed(evt);
+                btnInventaryControlActionPerformed(evt);
             }
         });
-        cateroryPanel1.add(btnCatalogue5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 260, 90));
+        menuPanel.add(btnInventaryControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 260, 90));
 
-        btnCatalogue6.setFont(new java.awt.Font("Quicksand Light", 0, 24)); // NOI18N
-        btnCatalogue6.setForeground(new java.awt.Color(17, 164, 164));
-        btnCatalogue6.setText("<html>Analitycs</html>");
-        btnCatalogue6.setBorder(null);
-        btnCatalogue6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCatalogue6.addActionListener(new java.awt.event.ActionListener() {
+        btnAnalitycs.setFont(new java.awt.Font("Quicksand Light", 0, 24)); // NOI18N
+        btnAnalitycs.setForeground(new java.awt.Color(17, 164, 164));
+        btnAnalitycs.setText("<html>Analitycs</html>");
+        btnAnalitycs.setBorder(null);
+        btnAnalitycs.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAnalitycs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCatalogue6ActionPerformed(evt);
+                btnAnalitycsActionPerformed(evt);
             }
         });
-        cateroryPanel1.add(btnCatalogue6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 260, 90));
+        menuPanel.add(btnAnalitycs, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 260, 90));
 
-        pnlProfile.add(cateroryPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 620));
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(17, 84, 84));
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setText("Ricardo lopez");
+        jLabel24.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        menuPanel.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 110, 40));
 
-        productsPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        productsPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlProfile.add(menuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 620));
+
+        pnlPersonalData.setBackground(new java.awt.Color(255, 255, 255));
+        pnlPersonalData.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnDeleteImageFile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/Group 35.png"))); // NOI18N
         btnDeleteImageFile.setBorder(null);
-        productsPanel1.add(btnDeleteImageFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 100, -1));
+        pnlPersonalData.add(btnDeleteImageFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 100, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/MaterialSymbolsLightAccountCircleOutline 1 (1).png"))); // NOI18N
         jButton3.setBorder(null);
-        productsPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 150, 150));
+        pnlPersonalData.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 150, 150));
 
         btnSaveChanges.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/Group 41 (1).png"))); // NOI18N
         btnSaveChanges.setBorder(null);
-        productsPanel1.add(btnSaveChanges, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 510, 100, -1));
+        pnlPersonalData.add(btnSaveChanges, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 510, 100, -1));
 
         txtChangePassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtChangePassword.setForeground(new java.awt.Color(91, 91, 91));
@@ -586,7 +560,7 @@ public class CothifyView extends javax.swing.JFrame {
                 txtChangePasswordActionPerformed(evt);
             }
         });
-        productsPanel1.add(txtChangePassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 300, 40));
+        pnlPersonalData.add(txtChangePassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 300, 40));
 
         txtChangeUsername.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtChangeUsername.setForeground(new java.awt.Color(91, 91, 91));
@@ -604,11 +578,11 @@ public class CothifyView extends javax.swing.JFrame {
                 txtChangeUsernameActionPerformed(evt);
             }
         });
-        productsPanel1.add(txtChangeUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 300, 40));
+        pnlPersonalData.add(txtChangeUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 300, 40));
 
         btnImageFile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/Group 33.png"))); // NOI18N
         btnImageFile.setBorder(null);
-        productsPanel1.add(btnImageFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 100, -1));
+        pnlPersonalData.add(btnImageFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 100, -1));
 
         txtConfirmPassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtConfirmPassword.setForeground(new java.awt.Color(91, 91, 91));
@@ -626,7 +600,7 @@ public class CothifyView extends javax.swing.JFrame {
                 txtConfirmPasswordActionPerformed(evt);
             }
         });
-        productsPanel1.add(txtConfirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, 300, 40));
+        pnlPersonalData.add(txtConfirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, 300, 40));
 
         txtSetName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtSetName.setForeground(new java.awt.Color(91, 91, 91));
@@ -644,7 +618,7 @@ public class CothifyView extends javax.swing.JFrame {
                 txtSetNameActionPerformed(evt);
             }
         });
-        productsPanel1.add(txtSetName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, 300, 40));
+        pnlPersonalData.add(txtSetName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, 300, 40));
 
         txtSetLastname.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtSetLastname.setForeground(new java.awt.Color(91, 91, 91));
@@ -662,7 +636,7 @@ public class CothifyView extends javax.swing.JFrame {
                 txtSetLastnameActionPerformed(evt);
             }
         });
-        productsPanel1.add(txtSetLastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, 300, 40));
+        pnlPersonalData.add(txtSetLastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, 300, 40));
 
         txtSetDayBirth.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtSetDayBirth.setForeground(new java.awt.Color(91, 91, 91));
@@ -680,9 +654,38 @@ public class CothifyView extends javax.swing.JFrame {
                 txtSetDayBirthActionPerformed(evt);
             }
         });
-        productsPanel1.add(txtSetDayBirth, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 300, 40));
+        pnlPersonalData.add(txtSetDayBirth, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 300, 40));
 
-        pnlProfile.add(productsPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 1010, 620));
+        pnlProfile.add(pnlPersonalData, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 1010, 620));
+
+        pnlPaymentMethods.setBackground(new java.awt.Color(255, 255, 255));
+        pnlPaymentMethods.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        card3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/Group 34.png"))); // NOI18N
+        card3.setBorder(null);
+        pnlPaymentMethods.add(card3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 160, 294, 177));
+
+        btnNextMethod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/Group 35 (1).png"))); // NOI18N
+        btnNextMethod.setBorder(null);
+        pnlPaymentMethods.add(btnNextMethod, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 420, 54, 28));
+
+        card1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/Group 33 (4).png"))); // NOI18N
+        card1.setBorder(null);
+        pnlPaymentMethods.add(card1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 294, 177));
+
+        card2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/Group 32.png"))); // NOI18N
+        card2.setBorder(null);
+        pnlPaymentMethods.add(card2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 294, 177));
+
+        btnSelectMethod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/Group 1.png"))); // NOI18N
+        btnSelectMethod.setBorder(null);
+        pnlPaymentMethods.add(btnSelectMethod, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 470, 115, 40));
+
+        btnBackMethod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons/Group 36.png"))); // NOI18N
+        btnBackMethod.setBorder(null);
+        pnlPaymentMethods.add(btnBackMethod, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, 54, 28));
+
+        pnlProfile.add(pnlPaymentMethods, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1010, 0, 1010, 620));
 
         pnlOptions.add(pnlProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1280, 60, 1280, 620));
 
@@ -1014,22 +1017,6 @@ public class CothifyView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmailFocusLost
 
-    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmailActionPerformed
-
-    private void txtUsernameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUsernameFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsernameFocusGained
-
-    private void txtUsernameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUsernameFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsernameFocusLost
-
-    private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsernameActionPerformed
-
     private void txtUsername1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUsername1FocusGained
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsername1FocusGained
@@ -1038,10 +1025,6 @@ public class CothifyView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsername1FocusLost
 
-    private void txtUsername1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsername1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsername1ActionPerformed
-
     private void txtUsername2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUsername2FocusGained
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsername2FocusGained
@@ -1049,10 +1032,6 @@ public class CothifyView extends javax.swing.JFrame {
     private void txtUsername2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUsername2FocusLost
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsername2FocusLost
-
-    private void txtUsername2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsername2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsername2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -1106,25 +1085,25 @@ public class CothifyView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBrandsActionPerformed
 
-    private void btnCatalogue2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatalogue2ActionPerformed
+    private void btnPersonalDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonalDataActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCatalogue2ActionPerformed
+    }//GEN-LAST:event_btnPersonalDataActionPerformed
 
-    private void btnCatalogue3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatalogue3ActionPerformed
+    private void btnPaymentMethodsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaymentMethodsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCatalogue3ActionPerformed
+    }//GEN-LAST:event_btnPaymentMethodsActionPerformed
 
-    private void btnCatalogue4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatalogue4ActionPerformed
+    private void btnShoppingHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShoppingHistoryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCatalogue4ActionPerformed
+    }//GEN-LAST:event_btnShoppingHistoryActionPerformed
 
-    private void btnCatalogue5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatalogue5ActionPerformed
+    private void btnInventaryControlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventaryControlActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCatalogue5ActionPerformed
+    }//GEN-LAST:event_btnInventaryControlActionPerformed
 
-    private void btnCatalogue6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatalogue6ActionPerformed
+    private void btnAnalitycsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnalitycsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCatalogue6ActionPerformed
+    }//GEN-LAST:event_btnAnalitycsActionPerformed
 
     private void txtChangePasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtChangePasswordFocusGained
         // TODO add your handling code here:
@@ -1200,33 +1179,38 @@ public class CothifyView extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnAnalitycs;
+    private javax.swing.JButton btnBackMethod;
     public javax.swing.JButton btnBrands;
     public javax.swing.JButton btnCasual;
     public javax.swing.JButton btnCatalogue;
-    public javax.swing.JButton btnCatalogue2;
-    public javax.swing.JButton btnCatalogue3;
-    public javax.swing.JButton btnCatalogue4;
-    public javax.swing.JButton btnCatalogue5;
-    public javax.swing.JButton btnCatalogue6;
     private javax.swing.JButton btnDeleteImageFile;
     public javax.swing.JLabel btnEN;
     public javax.swing.JButton btnElegant;
     public javax.swing.JLabel btnExit;
     public javax.swing.JButton btnFavorite;
     private javax.swing.JButton btnImageFile;
+    public javax.swing.JButton btnInventaryControl;
     public javax.swing.JButton btnLogin;
     public javax.swing.JLabel btnLogin2;
     public javax.swing.JButton btnMen;
+    private javax.swing.JButton btnNextMethod;
+    public javax.swing.JButton btnPaymentMethods;
+    public javax.swing.JButton btnPersonalData;
     public javax.swing.JButton btnProfile;
     public javax.swing.JLabel btnRegister;
     public javax.swing.JButton btnSaveChanges;
     private javax.swing.JButton btnSearch;
+    private javax.swing.JButton btnSelectMethod;
+    public javax.swing.JButton btnShoppingHistory;
     public javax.swing.JButton btnSport;
     public javax.swing.JButton btnSupport;
     public javax.swing.JButton btnWomen;
+    private javax.swing.JButton card1;
+    private javax.swing.JButton card2;
+    private javax.swing.JButton card3;
     private javax.swing.JPanel catalogo4;
     private javax.swing.JPanel cateroryPanel;
-    public javax.swing.JPanel cateroryPanel1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JInternalFrame jInternalFrame1;
@@ -1246,6 +1230,7 @@ public class CothifyView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     public javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1283,14 +1268,16 @@ public class CothifyView extends javax.swing.JFrame {
     private javax.swing.JList<String> list2;
     private javax.swing.JList<String> list3;
     private javax.swing.JPanel mainOpcionsBar;
+    public javax.swing.JPanel menuPanel;
     private javax.swing.JPanel pnlBar;
     public javax.swing.JPanel pnlCatalogue;
     public javax.swing.JPanel pnlLogin;
     public javax.swing.JPanel pnlMain;
     public javax.swing.JPanel pnlOptions;
+    public javax.swing.JPanel pnlPaymentMethods;
+    public javax.swing.JPanel pnlPersonalData;
     public javax.swing.JPanel pnlProfile;
     public javax.swing.JPanel pnlRegister;
-    public transient javax.swing.JPanel productsPanel1;
     public javax.swing.JTextField searchBar;
     private javax.swing.JPanel secondaryOpcionsBar;
     public javax.swing.JTextField txtChangePassword;
@@ -1302,7 +1289,6 @@ public class CothifyView extends javax.swing.JFrame {
     public javax.swing.JTextField txtSetLastname;
     public javax.swing.JTextField txtSetName;
     public javax.swing.JTextField txtUser;
-    public javax.swing.JTextField txtUsername;
     public javax.swing.JTextField txtUsername1;
     public javax.swing.JTextField txtUsername2;
     // End of variables declaration//GEN-END:variables

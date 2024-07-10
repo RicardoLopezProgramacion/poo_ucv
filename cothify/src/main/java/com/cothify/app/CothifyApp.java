@@ -14,7 +14,6 @@ public class CothifyApp {
         FlatLightLaf.setup();
         CothifyView view = new CothifyView();
         LoginController login = new LoginController(view);
-        OptionsController options = new OptionsController(view);
         view.setVisible(true);
     }
     

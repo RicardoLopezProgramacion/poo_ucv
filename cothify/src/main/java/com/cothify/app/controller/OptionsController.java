@@ -20,20 +20,10 @@ public class OptionsController implements ActionListener {
         if (e.getSource() == view.btnProfile) {
             Animacion.mover_izquierda(0, -1280, 1, 8, view.pnlCatalogue);
             Animacion.mover_derecha(-1280, 0, 1, 8, view.pnlProfile);
+            ProfileController profile = new ProfileController(view);
         }
 
-        if (e.getSource() == view.txtChangeUsername) {
-            view.txtChangeUsername.setText("");
-            view.txtChangePassword.setText("");
-            view.txtConfirmPassword.setText("");
-            view.txtSetName.setText("");
-            view.txtSetLastname.setText("");
-            view.txtSetDayBirth.setText("");
-        }
         
-        if (e.getSource() == view.btnSaveChanges) {
-        
-        }
     }
 
 }

@@ -5,19 +5,21 @@ import com.cothify.app.model.entity.Person;
 public class SalesManagerDAO implements PersonDAO {
 
     @Override
-    public void insert(Person person) {
+    public void insert(Object t) {
     }
 
     @Override
-    public void delete(Person person) {
+    public void delete(Object t) {
     }
 
     @Override
-    public void select(Person person) {
+    public void select(Object t) {
     }
 
     @Override
-    public void update(Person person) {
+    public void update(Object t) {
     }
+
+   
     
 }

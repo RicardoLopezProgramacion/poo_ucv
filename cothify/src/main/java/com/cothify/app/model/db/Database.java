@@ -17,11 +17,10 @@ public class Database {
 
     public Connection getConnection() {
         try {
-            conn = DriverManager.getConnection("jdbc::mysql://localhost:3306/proyecto_poo", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto_poo", "root", "");
+            System.out.println("Conexion Exitosa!");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        } finally {
-            disconnection();
         }
         return conn;
     }

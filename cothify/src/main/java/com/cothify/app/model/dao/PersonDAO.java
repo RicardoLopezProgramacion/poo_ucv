@@ -3,11 +3,11 @@ package com.cothify.app.model.dao;
 
 import com.cothify.app.model.entity.Person;
 
-public interface PersonDAO {
+public interface PersonDAO <T>{
     
-    void insert(Person person);
-    void delete(Person person);
-    void select(Person person);
-    void update(Person person);
+    void insert(T t);
+    void delete(T t);
+    void select(T t);
+    void update(T t);
     
 }
